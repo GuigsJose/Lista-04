@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.editor.enablePreview": false,
+    "editor.bracketPairColorization.enabled": false,
+    "workbench.editor.customLabels.enabled": false,
+    "workbench.settings.editor": "json",
+    "editor.fontFamily": "JetBrainsMono NF"
+}
