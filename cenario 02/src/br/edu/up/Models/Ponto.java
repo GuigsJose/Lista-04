@@ -1,12 +1,14 @@
 package br.edu.up.Models;
 
+import java.text.DecimalFormat;
+
 public class Ponto {
   private Double X;
   private Double Y;
 
-  public Ponto(double x, double y) {
-    this.X = x;
-    this.Y = y;
+  public Ponto(double x1, double y1) {
+    this.X = x1;
+    this.Y = y1;
   }
 
   public double setX(double x) {
@@ -25,11 +27,13 @@ public class Ponto {
     return this.Y;
   }
 
-  public double calcularDistanci(double x, double y) {
-    double calcX = Math.pow((x * 1) - (x * 2), 2);
-    double calcY = Math.pow((y * 1) - (y * 2), 2);
+  public String calcularDistanci(double x2, double y2) {
+    double calcX = Math.pow(this.X - x2, 2);
+    double calcY = Math.pow(this.Y - y2, 2);
     double result = Math.sqrt(calcX + calcY);
 
-    return result;
+    DecimalFormat df = new DecimalFormat("#.##");
+
+    return df.format(result);
   }
 }
