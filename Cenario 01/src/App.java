@@ -1,6 +1,5 @@
 import br.edu.up.Models.Livro;
 
-
 public class App {
     public static void main(String[] args)  {
         // Livro 01
