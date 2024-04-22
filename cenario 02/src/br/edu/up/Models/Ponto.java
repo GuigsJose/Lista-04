@@ -36,4 +36,15 @@ public class Ponto {
 
     return df.format(result);
   }
+
+  public String calcularDistanci(Ponto p) {
+    double calcX = Math.pow(this.X - p.getX(), 2);
+    double calcY = Math.pow(this.Y - p.getY(), 2);
+    double result = Math.sqrt(calcX + calcY);
+
+    DecimalFormat df = new DecimalFormat("#.##");
+
+    return df.format(result);
+  }
+
 }
