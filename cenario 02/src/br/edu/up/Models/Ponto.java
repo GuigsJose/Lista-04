@@ -1,7 +1,5 @@
 package br.edu.up.Models;
 
-import java.text.DecimalFormat;
-
 public class Ponto {
   private Double X;
   private Double Y;
@@ -27,24 +25,20 @@ public class Ponto {
     return this.Y;
   }
 
-  public String calcularDistanci(double x2, double y2) {
+  public double calcularDistanci(double x2, double y2) {
     double calcX = Math.pow(this.X - x2, 2);
     double calcY = Math.pow(this.Y - y2, 2);
     double result = Math.sqrt(calcX + calcY);
 
-    DecimalFormat df = new DecimalFormat("#.##");
-
-    return df.format(result);
+    return result;
   }
 
-  public String calcularDistanci(Ponto p) {
+  public double calcularDistanci(Ponto p) {
     double calcX = Math.pow(this.X - p.getX(), 2);
     double calcY = Math.pow(this.Y - p.getY(), 2);
     double result = Math.sqrt(calcX + calcY);
 
-    DecimalFormat df = new DecimalFormat("#.##");
-
-    return df.format(result);
+    return result;
   }
 
 }
