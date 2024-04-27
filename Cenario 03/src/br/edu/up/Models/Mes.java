@@ -25,9 +25,15 @@ public class Mes{
 
     public void AdicionarCompromisso(Compromisso comp, int diaMes){
         for (int i = 0; i < dias.length; i++) {
-            this.dias[i]. 
+            if(this.dias[i].getDia() == diaMes){
+                this.dias[i].AdicionarCompromisso(comp);
+                break;
+            }
         }
     }
+
+    
+
     // GET e SET
     public String getNome() {
         return Nome;
