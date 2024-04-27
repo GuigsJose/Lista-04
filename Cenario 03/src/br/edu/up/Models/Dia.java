@@ -5,25 +5,48 @@ import java.util.ArrayList;
 
 public class Dia {
   private int DiaMes;
-  private List<Compromisso> Compromissos = new ArrayList<Compromisso>();
+  private int QtdCompromisso = 10;
+  private Compromisso[] Compromissos = new Compromisso[this.QtdCompromisso];
 
   public Dia(int diaMes) {
     this.DiaMes = diaMes;
   }
 
+  public void setDia(int dia) {
+    this.DiaMes = dia;
+  }
+
+  public int getDia() {
+    return this.DiaMes;
+  }
+
   public void AdicionarCompromisso(Compromisso comp) {
-    this.Compromissos.add(comp);
+    for (int i = 0; i < this.Compromissos.length; i++) {
+      if (this.Compromissos[i] != comp) {
+        this.Compromissos[i] = comp;
+      }
+    }
   }
 
   public Compromisso ConsultarCompromisso(int hora) {
+    int index = 0;
 
-    return this.Compromissos.stream().filter(x -> {
-      return x.getHora() == hora;
-    }).findAny().orElse(null);
+    for (int i = 0; i < this.Compromissos.length; i++) {
+      if (this.Compromissos[i].getHora() == hora) {
+        index = i;
 
+      }
+    }
+    return this.Compromissos[index];
   }
 
-  // public void ExcluirCompromisso(int hora) {
-  // this.Compromissos.indexOf(Compromissos);
-  // }
+  public void ExcluirCompromisso(int hora) {
+    for (int i = 0; i < this.Compromissos.size(); i++) {
+      Compromisso c = this.Compromissos.get(i);
+      if (c.getHora() == hora) {
+        this.Compromissos.remove(c);
+        break;
+      }
+    }
+  }
 }
