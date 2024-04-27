@@ -41,12 +41,15 @@ public class Dia {
   }
 
   public void ExcluirCompromisso(int hora) {
-    for (int i = 0; i < this.Compromissos.size(); i++) {
-      Compromisso c = this.Compromissos.get(i);
-      if (c.getHora() == hora) {
-        this.Compromissos.remove(c);
-        break;
+    for (int i = 0; i < this.Compromissos.length; i++) {
+      if (this.Compromissos[i].getHora() == hora) {
+        this.Compromissos[i] = null;
       }
     }
+  }
+
+  public String ListarCompromisso() {
+
+    return this.Compromissos.toString();
   }
 }
