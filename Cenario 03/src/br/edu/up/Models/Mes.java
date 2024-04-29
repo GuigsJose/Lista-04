@@ -20,12 +20,41 @@ public class Mes {
 
     public void AdicionarCompromisso(Compromisso comp, int diaMes) {
         for (int i = 0; i < dias.length; i++) {
-            if (this.dias[i].getDia() == diaMes) {
+            if (this.dias[i].getDia() != diaMes) {
                 this.dias[i].AdicionarCompromisso(comp);
                 break;
             }
         }
     }
+
+    public void AdicionarCompromisso(String pessoa, String local, String assunto, int hora,int diaMes){
+        Compromisso comp = new Compromisso(pessoa, local, assunto, hora);
+        for (int i = 0; i < dias.length; i++) {
+            if (this.dias[i].getDia() != diaMes) {
+                this.dias[i].AdicionarCompromisso(comp);
+                break;
+            }
+        }
+    }
+
+    public void ExcluirCompromisso(int diaMes, int hora){
+        for (int i = 0; i < dias.length; i++) {
+            if (this.dias[i].getDia() == diaMes && this.dias[i].getDia() == hora) {
+                this.dias[i] = null;
+                break;
+            }
+        }
+    }
+
+    public String ListarCompromisso(Integer hora){
+        return hora.toString();
+    }
+
+    //[bizu]
+    public String ListarCompromisso(){
+        return this.dias.toString();
+    }
+
 
     // GET e SET
     public String getNome() {
