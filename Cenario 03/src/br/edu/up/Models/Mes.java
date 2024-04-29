@@ -1,38 +1,31 @@
 package br.edu.up.Models;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Mes{
+public class Mes {
     private String Nome;
     private int qtdeDias;
     private Dia[] dias = new Dia[31];
 
-   
-
-    public Mes(int qtdeDias, String nome){
+    public Mes(int qtdeDias, String nome) {
         this.qtdeDias = qtdeDias;
         this.Nome = nome;
     }
 
-    public void AdicionarDia(Dia dia){
+    public void AdicionarDia(Dia dia) {
         for (int i = 0; i < this.dias.length; i++) {
             if (this.dias[i] != dia) {
                 this.dias[i] = dia;
-            } 
+            }
         }
     }
 
-    public void AdicionarCompromisso(Compromisso comp, int diaMes){
+    public void AdicionarCompromisso(Compromisso comp, int diaMes) {
         for (int i = 0; i < dias.length; i++) {
-            if(this.dias[i].getDia() == diaMes){
+            if (this.dias[i].getDia() == diaMes) {
                 this.dias[i].AdicionarCompromisso(comp);
                 break;
             }
         }
     }
-
-    
 
     // GET e SET
     public String getNome() {
