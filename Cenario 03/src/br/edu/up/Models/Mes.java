@@ -46,8 +46,8 @@ public class Mes {
         }
     }
 
-    public String ListarCompromisso(Integer hora){
-        return hora.toString();
+    public String ListarCompromisso(Integer diaMes){
+        return diaMes.toString();
     }
 
     //[bizu]
