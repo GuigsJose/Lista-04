@@ -1,8 +1,5 @@
 package br.edu.up.Models;
 
-import java.util.List;
-import java.util.ArrayList;
-
 public class Dia {
   private int DiaMes;
   private int QtdCompromisso = 10;
