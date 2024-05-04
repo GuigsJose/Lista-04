@@ -2,8 +2,7 @@ package br.edu.up.Models;
 
 public class Dia {
   private int DiaMes;
-  private int QtdCompromisso = 10;
-  private Compromisso[] Compromissos = new Compromisso[this.QtdCompromisso];
+  private Compromisso[] Compromissos = new Compromisso[10];
 
   public Dia(int diaMes) {
     this.DiaMes = diaMes;
@@ -20,8 +19,10 @@ public class Dia {
   public void AdicionarCompromisso(Compromisso comp) {
     for (int i = 0; i < this.Compromissos.length; i++) {
       if (this.Compromissos[i] != comp) {
+
         this.Compromissos[i] = comp;
       }
+      // break;
     }
   }
 
@@ -45,8 +46,11 @@ public class Dia {
     }
   }
 
-  public String ListarCompromisso() {
+  public void ListarCompromisso() {
+    for (int i = 0; i < this.Compromissos.length; i++) {
+      System.out.println(this.Compromissos.length);
 
-    return this.Compromissos.toString();
+    }
+
   }
 }

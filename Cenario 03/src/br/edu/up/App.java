@@ -5,17 +5,21 @@ import br.edu.up.Models.Dia;
 
 public class App {
     public static void main(String[] args) {
+        Dia dia = new Dia(26);
 
         Compromisso comp = new Compromisso("Gui", "Faculdade", "Teste", 12);
         Compromisso comp1 = new Compromisso("Lucas", "Posito", "Teste1", 19);
-        Dia dia = new Dia(26);
 
         dia.AdicionarCompromisso(comp);
+        // dia.ListarCompromisso();
         dia.AdicionarCompromisso(comp1);
 
-        var teste = dia.ConsultarCompromisso(19);
+        var teste1 = dia.ConsultarCompromisso(12);
 
-        System.out.println("teste >>" + teste);
+        // dia.ExcluirCompromisso(19);
+
+        dia.ListarCompromisso();
+        // System.out.println("teste1 >>" + teste1);
 
     }
 }
