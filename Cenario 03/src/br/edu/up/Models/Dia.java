@@ -45,8 +45,9 @@ public class Dia {
     }
   }
 
-  public String ListarCompromisso() {
-
-    return this.Compromissos.toString();
+  public void ListarCompromisso() {
+    for (Compromisso comp : this.Compromissos) {
+      System.out.println(comp + " ");
+    }
   }
 }

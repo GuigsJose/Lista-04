@@ -2,33 +2,14 @@ package Models;
 
 public class Estacionamento {
 
-    private Carro[] carros;
-
     private Vaga[] vagas = new Vaga[10];
 
-    private String periodo;
-
-    public Estacionamento(String periodo, Vaga[] vagas){
-        this.periodo = periodo;
-        this.vagas = vagas;
+    public void setVaga(Vaga vaga) {
+        this.vagas[vaga.getLocalVaga()] = vaga;
     }
 
-    public Carro[] getCarros() {
-        return carros;
+    public Vaga getVagas(int localVaga) {
+        return this.vagas[localVaga];
     }
-
-    public String getPeriodo() {
-        return periodo;
-    }
-
-    public Vaga[] getVagas(){
-        return vagas;
-    }
-
-    public void setPeriodo(String periodo){
-        this.periodo = periodo;
-    }
-
-    
 
 }
