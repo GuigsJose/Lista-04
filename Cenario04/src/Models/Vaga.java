@@ -1,23 +1,64 @@
 package Models;
 
 public class Vaga {
-    private boolean disponivel;
-    private int vaga;
+    private boolean disponivel = true;
+    private int localVaga;
+    private Carro carro;
+    private String periodo;
+    private double tarifa;
+    private boolean pago = false;
 
-    public void setDisponivel(boolean disponivel){
+    public Vaga(Carro carro, int vaga, String periodo) {
+        this.carro = carro;
+        this.localVaga = vaga;
+        this.periodo = periodo;
+    }
+
+    public void setTarifa(double tarifa) {
+        this.tarifa = tarifa;
+    }
+
+    public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-    
-    public void setVaga(int vaga){
-        this.vaga = vaga;
+
+    public void setLocalVaga(int vaga) {
+        this.localVaga = vaga;
     }
 
-    public boolean getDisponivel(){
+    public void setCarro(Carro carro) {
+        this.carro = carro;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.carro = carro;
+    }
+
+    public void setPagamento(boolean pago) {
+        this.pago = pago;
+    }
+
+    public double tarifa() {
+        return this.tarifa;
+    }
+
+    public boolean getPagamento() {
+        return this.pago;
+    }
+
+    public Carro getCarros() {
+        return this.carro;
+    }
+
+    public String getPeriodo() {
+        return this.periodo;
+    }
+
+    public boolean getDisponivel() {
         return this.disponivel;
     }
 
-    public int getVaga(){
-        return this.vaga;
+    public int getLocalVaga() {
+        return this.localVaga;
     }
-
 }
