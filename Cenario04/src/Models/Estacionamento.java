@@ -2,9 +2,12 @@ package Models;
 
 public class Estacionamento {
 
-    private Carro[] carros;
 
     private Vaga[] vagas = new Vaga[10];
+
+    public void setVagas(Vaga[] vagas) {
+        this.vagas = vagas;
+    }
 
     private String periodo;
 
@@ -13,9 +16,7 @@ public class Estacionamento {
         this.vagas = vagas;
     }
 
-    public Carro[] getCarros() {
-        return carros;
-    }
+
 
     public String getPeriodo() {
         return periodo;
@@ -29,6 +30,5 @@ public class Estacionamento {
         this.periodo = periodo;
     }
 
-    
 
 }
