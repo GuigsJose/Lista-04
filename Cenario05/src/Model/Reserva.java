@@ -2,32 +2,15 @@ package Model;
 
 public class Reserva {
 
-    private String responsavel;
-    private int qtdPessoas;
+    
     private String dataReserva;
     private double valorTotal;
+    private Cliente clientes;
 
-    public Reserva(String responsavel, int qtdPessoas, String dataReserva, double valorTotal) {
-        this.responsavel = responsavel;
-        this.qtdPessoas = qtdPessoas;
+    public Reserva(String dataReserva, double valorTotal ) {
+        
         this.dataReserva = dataReserva;
         this.valorTotal = valorTotal;
-    }
-
-    public String getResponsavel() {
-        return responsavel;
-    }
-
-    public void setResponsavel(String responsavel) {
-        this.responsavel = responsavel;
-    }
-
-    public int getQtdPessoas() {
-        return qtdPessoas;
-    }
-
-    public void setQtdPessoas(int qtdPessoas) {
-        this.qtdPessoas = qtdPessoas;
     }
 
     public String getDataReserva() {
@@ -45,5 +28,19 @@ public class Reserva {
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
+
+
+
+    public Cliente getClientes() {
+        return clientes;
+    }
+
+
+
+    public void setClientes(Cliente clientes) {
+        this.clientes = clientes;
+    }
+
+    
     
 }
