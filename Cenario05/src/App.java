@@ -1,5 +1,11 @@
+import Controller.EventoController;
+import View.EventoView;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        EventoController controller= new EventoController();
+        EventoView view = new EventoView(controller);
+        
+        view.executar();
     }
 }
