@@ -1,9 +1,8 @@
 package br.edu.up;
-
-import br.edu.up.Controller.EstacionamentoController;
-import br.edu.up.Models.Estacionamento;
-import br.edu.up.Models.Vaga;
-import br.edu.up.view.EstacionamentoView;
+import Controller.EstacionamentoController;
+import Models.Estacionamento;
+import Models.Vaga;
+import view.EstacionamentoView;
 
 public class App {
     public static void main(String[] args) throws Exception {
