@@ -61,4 +61,47 @@ public class AeroportoController {
         }
     }
 
+    public Pessoa[] listarPessoas(){
+        Pessoa[] res = new Pessoa[count];
+        System.arraycopy(pessoas,0,res,0,count);
+        return res;
+    }
+
+    public Aeronave[] listarAeronaves() {
+        Aeronave[] resultado = new Aeronave[coutAer];
+        System.arraycopy(aeronaves, 0, resultado, 0, coutAer);
+        return resultado;
+    }
+
+    public Passagem[] listarPassagens() {
+        Passagem[] resultado = new Passagem[coutPass];
+        System.arraycopy(passagems, 0, resultado, 0, coutPass);
+        return resultado;
+    }
+
+    public void removerAeronavePorCodigo(String codigo) {
+        for (int i = 0; i < coutAer; i++) {
+            if (aeronaves[i].getCodigo().equals(codigo)) {
+                aeronaves[i] = aeronaves[coutAer - 1];
+                aeronaves[coutAer - 1] = null;
+                coutAer--;
+                return;
+            }
+        }
+    }
+
+    public void removerPassagem(String numeroAssento, String classeAssento, String dataVoo) {
+        for (int i = 0; i < coutPass; i++) {
+            Passagem passagem = passagems[i];
+            if (passagem.getNumeroAssento().equals(numeroAssento) &&
+                passagem.getClasseAssento().equals(classeAssento) &&
+                passagem.getDataVoo().equals(dataVoo)) {
+                passagems[i] = passagems[coutPass - 1];
+                passagems[coutPass - 1] = null;
+                coutPass--;
+                return;
+            }
+        }
+    }
+
 }
