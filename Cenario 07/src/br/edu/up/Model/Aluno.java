@@ -36,6 +36,11 @@ public class Aluno extends Pessoa{
         this.turno = turno;
     }
 
+    @Override
+    public String toString() {
+        return "Aluno [anoIngresso=" + anoIngresso + ", curso=" + curso + ", turno=" + turno + "]";
+    }
+
     
 
     

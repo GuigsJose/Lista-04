@@ -58,7 +58,13 @@ public class Professor extends Pessoa{
         this.tituloTrabalho = tituloTrabalho;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Professor [numLattes=" + numLattes + ", instituicao=" + instituicao + ", anoConclusao=" + anoConclusao
+                + ", titulObtido=" + titulObtido + ", tituloTrabalho=" + tituloTrabalho + "]";
+    }
 
+    
+    
     
 }

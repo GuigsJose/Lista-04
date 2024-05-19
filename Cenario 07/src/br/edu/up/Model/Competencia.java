@@ -25,6 +25,11 @@ public class Competencia {
         this.necessario = necessario;
     }
 
+    @Override
+    public String toString() {
+        return "Competencia [descricao=" + descricao + ", necessario=" + necessario + "]";
+    }
+
     
     
 }

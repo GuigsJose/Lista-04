@@ -35,5 +35,11 @@ public class Pessoa {
         this.matricula = matricula;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa [nome=" + nome + ", rg=" + rg + ", matricula=" + matricula + "]";
+    }
+
+    
         
 }

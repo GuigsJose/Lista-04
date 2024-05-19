@@ -1,5 +1,7 @@
 package br.edu.up.Model;
 
+import java.util.Arrays;
+
 public class SituacaoCompetencia {
     private Aluno aluno;
     private Disciplina disciplina;
@@ -33,6 +35,12 @@ public class SituacaoCompetencia {
 
     public void setCompetencias(boolean[] competencias) {
         this.competencias = competencias;
+    }
+
+    @Override
+    public String toString() {
+        return "SituacaoCompetencia [aluno=" + aluno + ", disciplina=" + disciplina + ", competencias="
+                + Arrays.toString(competencias) + "]";
     }
     
     
