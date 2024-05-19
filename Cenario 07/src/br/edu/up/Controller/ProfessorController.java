@@ -24,6 +24,7 @@ public class ProfessorController {
                     professores[j] = professores[j+1];
                 }
                 contador--;
+                return;
             }
         }
     }

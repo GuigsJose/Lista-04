@@ -26,6 +26,7 @@ public class AlunoController {
                 }
 
                 contador--;
+                return;
             }
         }
     }
