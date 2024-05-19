@@ -1,6 +1,8 @@
 package br.edu.up.Controller;
 
+import br.edu.up.Model.Aluno;
 import br.edu.up.Model.Disciplina;
+import br.edu.up.Model.SituacaoCompetencia;
 
 public class DisciplinaController {
     private Disciplina[] disciplinas;
@@ -37,4 +39,8 @@ public class DisciplinaController {
         }
         return null;
     }
+
+    
+
 }
+
