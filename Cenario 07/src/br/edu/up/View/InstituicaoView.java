@@ -21,7 +21,7 @@ public class InstituicaoView {
     public void executar() {
         int opcao;
         do {
-            System.out.println("\n=== MENU PRINCIPAL ===");
+            System.out.println("\n--- MENU PRINCIPAL ---");
             System.out.println("1. Adicionar Professor");
             System.out.println("2. Buscar Professor");
             System.out.println("3. Remover Professor");
