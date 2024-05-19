@@ -7,10 +7,10 @@ public class SituacaoCompetencia {
     private Disciplina disciplina;
     private boolean[] competencias;
 
-    public SituacaoCompetencia(Aluno aluno, Disciplina disciplina, boolean[] competencias) {
+    public SituacaoCompetencia(Aluno aluno, Disciplina disciplina) {
         this.aluno = aluno;
         this.disciplina = disciplina;
-        this.competencias = competencias;
+    
     }
 
     public Aluno getAluno() {
