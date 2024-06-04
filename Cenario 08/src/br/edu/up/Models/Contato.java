@@ -5,7 +5,7 @@ public abstract class Contato {
   private String Nome;
   private String Telefone;
 
-  public Contato(int codigo, String nome, String telefone) {`
+  public Contato(int codigo, String nome, String telefone) {
     Codigo = codigo;
     Nome = nome;
     Telefone = telefone;
