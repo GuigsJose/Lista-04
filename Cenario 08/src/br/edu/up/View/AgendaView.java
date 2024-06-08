@@ -23,24 +23,21 @@ public class AgendaView {
 
       switch (opcao) {
         case 1:
-          adicionarProfessor();
+          IncluirContatoPessoal();
           break;
         case 2:
-          buscarProfessor();
+          IncluirContatoComercial();
           break;
         case 3:
-          removerProfessor();
+          ExcluirContato();
           break;
         case 4:
-          adicionarAluno();
+          ConsultarContato();
           break;
         case 5:
-          buscarAluno();
+          ListarContatos();
           break;
         case 6:
-          removerAluno();
-          break;
-        case 10:
           System.out.println("Saindo...");
           break;
         default:
@@ -50,6 +47,55 @@ public class AgendaView {
   }
 
   void IncluirContatoPessoal() {
+    System.out.println("\n-_-_- Adicionar contato pessoal -_-_-");
+    System.out.print("Codigo: ");
+    int codigo = sc.nextInt();
+    System.out.print("Nome: ");
+    String nome = sc.nextLine();
+    System.out.print("Telefone: ");
+    String telefone = sc.nextLine();
+    System.out.print("Aniversario");
+    String aniversario = sc.nextLine();
+    agendaController.AddContatoPessoal(codigo, nome, telefone, aniversario);
+    System.out.println("Contato Pessoal adicionado com sucesso!");
+  }
 
+  void IncluirContatoComercial() {
+    System.out.println("\n-_-_- Adicionar contato comercial -_-_-");
+    System.out.print("Codigo: ");
+    int codigo = sc.nextInt();
+    System.out.print("Nome: ");
+    String nome = sc.nextLine();
+    System.out.print("telefone: ");
+    String telefone = sc.nextLine();
+    System.out.print("Cnpj");
+    String cnpj = sc.nextLine();
+    agendaController.AddContatoComercial(codigo, nome, telefone, cnpj);
+    System.out.println("Contato Comercial adicionado com sucesso!");
+  }
+
+  void ExcluirContato() {
+    System.out.println("\n-_-_- Remover contato -_-_-");
+    System.out.print("Codigo: ");
+    int codigo = sc.nextInt();
+    agendaController.DeleteContato(codigo);
+    System.out.println("Contato removido com sucesso!");
+  }
+
+  void ConsultarContato() {
+    System.out.println("\n-_-_- Consultar contato -_-_-");
+    System.out.print("Codigo: ");
+    int codigo = sc.nextInt();
+    if (agendaController.ConsultarContato(codigo).isEmpty()) {
+      System.out.println("Contato não encontrado");
+    } else {
+      System.out.println("Contato Encontrado: ");
+      System.out.println(agendaController.ConsultarContato(codigo));
+    }
+  }
+
+  void ListarContatos() {
+    System.out.println("\n-_-_- Lista de contatos -_-_-");
+    agendaController.ListaContatos();
   }
 }
