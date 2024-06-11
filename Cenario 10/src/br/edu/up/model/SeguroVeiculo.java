@@ -6,6 +6,8 @@ public class SeguroVeiculo extends Seguro{
     private double vlrFranquia;
     private boolean temCarroReserva;
     private boolean cobreVidros;
+
+    public SeguroVeiculo(){}
     
     public SeguroVeiculo(String apolice, Segurado segurado, double vlrApolice, LocalDate dataInicio, LocalDate dataFim,
             double vlrFranquia, boolean temCarroReserva, boolean cobreVidros) {

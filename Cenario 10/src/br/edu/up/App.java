@@ -1,7 +1,10 @@
 package br.edu.up;
 
+import br.edu.up.view.SeguroView;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        SeguroView view = new SeguroView();
+        view.menu();
     }
 }

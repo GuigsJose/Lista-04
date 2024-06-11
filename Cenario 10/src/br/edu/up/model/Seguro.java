@@ -9,7 +9,9 @@ public abstract class Seguro {
     private LocalDate dataInicio;
     private LocalDate dataFim;
 
-    
+    public Seguro(){
+        
+    }
     public Seguro(String apolice, Segurado segurado, double vlrApolice, LocalDate dataInicio, LocalDate dataFim) {
         this.apolice = apolice;
         this.segurado = segurado;

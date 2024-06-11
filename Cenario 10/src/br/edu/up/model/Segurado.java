@@ -1,7 +1,6 @@
 package br.edu.up.model;
 
 public class Segurado {
-
     private String nome;
     private String rg;
     private String cpf;
@@ -11,8 +10,7 @@ public class Segurado {
     private String cep;
     private String cidade;
 
-    public Segurado(String nome, String rg, String cpf, Sexo sexo, String telefone, String endereco, String cep,
-            String cidade) {
+    public Segurado(String nome, String rg, String cpf, Sexo sexo, String telefone, String endereco, String cep, String cidade) {
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
@@ -86,12 +84,4 @@ public class Segurado {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-
-    
-
-    
-}
-
-enum Sexo{
-    MASCULINO,FEMININO;
 }

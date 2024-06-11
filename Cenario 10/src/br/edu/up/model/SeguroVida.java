@@ -5,6 +5,10 @@ import java.time.LocalDate;
 public class SeguroVida extends Seguro{
     private boolean cobreDoenca;
     private boolean cobreAcidente;
+
+    public SeguroVida(){
+        
+    }
     
     public SeguroVida(String apolice, Segurado segurado, double vlrApolice, LocalDate dataInicio, LocalDate dataFim,
             boolean cobreDoenca, boolean cobreAcidente) {
