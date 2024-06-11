@@ -18,5 +18,55 @@ public abstract class Seguro {
         this.dataFim = dataFim;
     }
 
+
+    public String getApolice() {
+        return apolice;
+    }
+
+
+    public void setApolice(String apolice) {
+        this.apolice = apolice;
+    }
+
+
+    public Segurado getSegurado() {
+        return segurado;
+    }
+
+
+    public void setSegurado(Segurado segurado) {
+        this.segurado = segurado;
+    }
+
+
+    public double getVlrApolice() {
+        return vlrApolice;
+    }
+
+
+    public void setVlrApolice(double vlrApolice) {
+        this.vlrApolice = vlrApolice;
+    }
+
+
+    public LocalDate getDataInicio() {
+        return dataInicio;
+    }
+
+
+    public void setDataInicio(LocalDate dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+
+    public LocalDate getDataFim() {
+        return dataFim;
+    }
+
+
+    public void setDataFim(LocalDate dataFim) {
+        this.dataFim = dataFim;
+    }
+
     
 }
